@@ -539,3 +539,51 @@ main {
         height: 100%;
     }
 }
+html {
+    font-size: 16px; /* Set a base font size */
+}
+
+body {
+    font-size: 1rem; /* 1rem = 16px */
+    color: var(--text-color);
+}
+
+.header-icon {
+    font-size: 1.375rem; /* 1.375rem = 22px */
+}
+
+#menu-icon {
+    font-size: 1.5rem; /* 1.5rem = 24px */
+}
+
+.navbar a {
+    font-size: 1rem; /* 1rem = 16px */
+}
+
+/* Adjust font sizes for smaller screens */
+@media (max-width: 768px) {
+    .home-text h1 {
+        font-size: 1.5rem; /* 1.5rem = 24px */
+    }
+}
+
+@media (max-width: 360px) {
+    .home-text h1 {
+        font-size: 1.4rem; /* 1.4rem = 22.4px */
+    }
+    .home-text p {
+        font-size: 0.8rem; /* 0.8rem = 12.8px */
+    }
+    .about-text h2 {
+        font-size: 1.2rem; /* 1.2rem = 19.2px */
+    }
+    .heading h2 {
+        font-size: 1.2rem; /* 1.2rem = 19.2px */
+    }
+    .footer-box h3 {
+        font-size: 1rem; /* 1rem = 16px */
+    }
+    .footer-box p {
+        font-size: 0.8rem; /* 0.8rem = 12.8px */
+    }
+}
