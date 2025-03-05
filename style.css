@@ -20,15 +20,19 @@
 section{
     padding: 50px 100px;
 }
+img{
+    width: 100%;
+}
 
 body{
     color: var(--text-color);
 }
 header{
     position: fixed;
-    top: 0;
-    right: 0;
     width: 100%;
+    top: 0;
+    left: 0;
+    right: 0; 
     z-index: 1000;
     display: flex;
     justify-content: space-between;
@@ -139,7 +143,7 @@ header{
 }
 .about{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(17rem,auto));
     align-items: center;
     gap: 1.5rem;
 }
@@ -176,6 +180,10 @@ header{
     flex-direction: column;
     border-radius: 0.5rem;
     box-shadow: var(--box-shadow);
+}
+.product-container .box:hover{
+    transform: scale(105%);
+    transition: 0.25s transform linear;
 }
 .product-container img{
     width: 100%;
@@ -254,4 +262,279 @@ header{
     transform: scale(105%);
     transition: 1s all linear;
 
+}
+.footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,auto));
+    gap: 1.5rem;
+}
+.footer-box h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.footer-box p{
+    font-size: 0.938rem;
+    margin-bottom: 10px;
+}
+.social{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+.social a .bx:hover{
+    background: var(--main-color);
+    color: var(--bg-color);
+}
+.footer-box li a{
+    color: var(--text-color);
+}
+.footer-box li a:hover{
+    color: var(--main-color);
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    font-size: 0.9rem;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+@keyframes hero{
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(100px);
+    }    
+}
+.home-img img{
+    animation: hero 5s infinite linear;
+}
+
+
+
+@media(max-width:1058px){
+    header{
+        padding: 16px 60px;
+    }
+    section{
+        padding: 50px 60px;
+    }
+    .home-text h1{
+        font-size: 2.4rem;
+    }
+}
+@media(max-width:991px){
+   header{
+       padding: 16px 4%;
+   }
+   section{
+         padding: 50px 4%;
+   }
+    .home-text h1{
+         font-size: 2rem;
+    }
+    
+}
+@media (max-width: 768px) {
+    header {
+        padding: 12px 4%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: var(--text-color);
+    }
+    #menu-icon {
+        display: initial;
+    }
+    .navbar {
+        position: absolute;
+        top: -570px; /* Hide the navbar by default */
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--secondary-color);
+        row-gap: 1.4rem;
+        border: 1px solid black;
+        padding: 20px;
+        transition: 0.3s;
+        text-align: center;
+    }
+    .navbar a {
+        color: var(--text-color);
+    }
+    .navbar a:hover {
+        color: var(--bg-color);
+    }
+    .navbar.active {
+        top: 100%; /* Show the navbar when active */
+    }
+    .home {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .home-img img {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .home-text h1 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+    .about {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .about-img img {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .product-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .product-container .box {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 360px) {
+    header {
+        padding: 11px 4%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: var(--text-color);
+    }
+    .navbar {
+        position: absolute;
+        top: -570px; /* Hide the navbar by default */
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--secondary-color);
+        row-gap: 1.4rem;
+        border: 1px solid black;
+        padding: 20px;
+        transition: 0.3s;
+        text-align: center;
+    }
+    .navbar a {
+        color: var(--text-color);
+    }
+    .navbar a:hover {
+        color: var(--bg-color);
+    }
+    .navbar.active {
+        top: 100%; /* Show the navbar when active */
+    }
+    .logo img {
+        width: 45px;
+    }
+    .home-text {
+        padding-top: 15px;
+    }
+    .home-text h1 {
+        font-size: 1.4rem;
+    }
+    .home-text p {
+        font-size: 0.8rem;
+        font-weight: 300;
+    }
+    .about-img {
+        order: 2;
+    }
+    .about-text {
+        text-align: center;
+    }
+    .about-text h2 {
+        font-size: 1.2rem;
+    }
+    .heading h2 {
+        font-size: 1.2rem;
+    }
+    .product-container {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    .product-container .box {
+        padding: 5px;
+    }
+    .product-container img {
+        height: auto;
+        padding: 10px;
+    }
+    .custormers-container {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        padding: 10px 2%;
+    }
+    .custormers-container .box {
+        padding: 10px;
+    }
+    .custormers-container .box img {
+        width: 50px;
+        height: 50px;
+    }
+    .footer {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        padding: 10px 2%;
+    }
+    .footer-box h3 {
+        font-size: 1rem;
+    }
+    .footer-box p {
+        font-size: 0.8rem;
+    }
+    .social {
+        column-gap: 0.3rem;
+    }
+    .social a .bx:hover {
+        background: var(--main-color);
+        color: var(--bg-color);
+    }
+    .footer-box li a {
+        font-size: 0.8rem;
+    }
+    .footer-box li a:hover {
+        color: var(--main-color);
+    }
+    .contact {
+        row-gap: 0.3rem;
+    }
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: var(--bg-color);
+    }
+    html, body {
+        width: 100%;
+        height: 100%;
+    }
 }
