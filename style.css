@@ -401,7 +401,8 @@ main {
         margin: 0 auto;
     }
     .home-text h1 {
-        font-size: 2rem; /* Adjust font size for smaller screens */
+        font-size: 2rem;
+        margin:5rem 0 0 ; /* Adjust font size for smaller screens */
     }
     .about {
         grid-template-columns: 1fr;
